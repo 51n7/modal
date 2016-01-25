@@ -1,6 +1,6 @@
 ## A Modal Component
 
-This is a simple responsive modal library built with vanilla JS and utilizing [Hogan.js](http://twitter.github.io/hogan.js/) for dynamic content templating.
+This is a simple responsive modal library built with vanilla JS and utilizing [Hogan.js](http://twitter.github.io/hogan.js/) for dynamic content templating. [View The Demo →](http://jonbest.ca/modal/)
 
 ## Usage
 
