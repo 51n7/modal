@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta charset="UTF-8">
+
+	<title>Modal Test</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/styles.css">
+		
+	<script src="js/hogan.template.js"></script>
+	<script src="js/hogan.content.js"></script>
+
+	<!-- custom modal library -->
+	<script src="js/modal.js"></script>
+
+</head>
+<body>
+
+	<button id="modal-btn" class="modal-btn" type="button">Launch Modal</button>
+
+	<script type="text/javascript">
+
+		// render Hogan template
+		var data = {
+			one: 'Hello',
+			two: 'World'
+		};
+		var compiledTemplate = templates['content'];
+		var renderedTemplate = compiledTemplate.render(data);
+		
+		// build modal object
+		var myModal = new Modal({
+			title: "I'm a modal window!",
+			content: renderedTemplate,
+			buttons: [
+				{
+					className: "other"
+				},{
+					className: "other"
+				}
+			]
+		});
+
+		// open modal on click
+		var openModal = document.getElementById('modal-btn');
+		openModal.addEventListener('click', function() {
+			myModal.open();
+		});
+
+	</script>
+
+</body>
+</html>

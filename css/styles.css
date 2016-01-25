@@ -1,0 +1,220 @@
+/*
+ * Start of CSS to be removed on production
+ */
+html, body {
+  height: 100%;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+body {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: #666666;
+  line-height: 22px;
+  text-align: center; }
+  body:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+  body p {
+    color: #666666;
+    margin: 0; }
+  body button {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer; }
+
+.button {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: normal;
+  margin: 0 0 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6875rem 1.5rem 0.625rem;
+  background-color: #86b929;
+  color: #FFFFFF;
+  transition: background-color 200ms ease-out;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle; }
+  .button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3px;
+    background: #678f21;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out; }
+  .button:hover:before {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1); }
+  .button.secondary {
+    background-color: #eceeee;
+    border-color: #bac1c1;
+    color: #666666; }
+  .button.secondary:hover, .button.secondary:focus {
+    color: #333333; }
+  .button.secondary:before {
+    background-color: #c2c2c2; }
+  .button.error {
+    background: #f96561; }
+  .button.error:before {
+    background-color: #9b5e5c; }
+  .button.warning {
+    background: #f49300;
+    border-color: #c37600;
+    color: #FFFFFF; }
+  .button.warning:before {
+    background-color: #99703b; }
+
+/*
+ * End of CSS to be removed on production
+ */
+/* Modal Base CSS */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch; }
+  .modal-wrapper .modal {
+    font-family: Helvetica,Arial,sans-serif;
+    color: #2b2e38;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    outline: 0;
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 700px;
+    width: 100%;
+    opacity: 0;
+    box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    height: 100%;
+    overflow: auto;
+    border-radius: 0;
+    /* Close Button */ }
+    @media only screen and (min-width: 40.0625em) {
+      .modal-wrapper .modal {
+        height: auto;
+        overflow: hidden;
+        border-radius: 4px; } }
+    .modal-wrapper .modal .modal-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0;
+      cursor: pointer;
+      border: 0;
+      outline: none;
+      height: 100%;
+      width: 48px;
+      background: url("../img/close.png") no-repeat center; }
+    .modal-wrapper .modal .modal-header {
+      color: #666666;
+      background: #eceeee;
+      padding: 15px 40px 15px 20px;
+      position: fixed;
+      width: 100%;
+      box-sizing: border-box; }
+      @media only screen and (min-width: 40.0625em) {
+        .modal-wrapper .modal .modal-header {
+          position: relative;
+          width: auto; } }
+      .modal-wrapper .modal .modal-header h3 {
+        font-weight: normal;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .modal-wrapper .modal .modal-content {
+      padding: 65px 20px 5px 20px;
+      box-sizing: border-box;
+      min-height: 100%;
+      height: auto !important;
+      height: 100%; }
+      @media only screen and (min-width: 40.0625em) {
+        .modal-wrapper .modal .modal-content {
+          margin: 0 !important;
+          padding: 13px 20px 15px 20px; }
+          .modal-wrapper .modal .modal-content .push {
+            display: none; } }
+    .modal-wrapper .modal .modal-footer {
+      text-align: center;
+      margin: 0px 20px;
+      padding: 20px 0px;
+      border-top: 2px solid #eceeee; }
+      .modal-wrapper .modal .modal-footer .button {
+        box-sizing: border-box;
+        width: 100%; }
+        .modal-wrapper .modal .modal-footer .button + .button {
+          margin-top: 15px; }
+        @media only screen and (min-width: 40.0625em) {
+          .modal-wrapper .modal .modal-footer .button {
+            width: auto; }
+            .modal-wrapper .modal .modal-footer .button + .button {
+              margin-top: 0;
+              margin-left: 0.8rem; } }
+  .modal-wrapper .modal-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    background: rgba(0, 0, 0, 0.6); }
+
+.modal-wrapper:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%; }
+
+.modal-wrapper.modal-open .modal,
+.modal-wrapper.modal-open .modal-overlay {
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */
